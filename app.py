@@ -236,7 +236,7 @@ from xml.sax.saxutils import escape
 
 def configure_page():
     st.set_page_config(
-        page_title="PCB/Schematic Reviewer",
+        page_title="CircuitMind AI",
         page_icon="🟩",
         layout="wide",
         initial_sidebar_state="expanded",
