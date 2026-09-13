@@ -40,9 +40,9 @@ from PIL import Image
 # ---------------------------------------------------------------------------
 
 # Gemini model configuration.
-DEFAULT_MODEL = "gemini-3.7-flash"
+DEFAULT_MODEL = "gemini-3.6-flash"
 MODEL_OPTIONS = [
-    "gemini-3.7-flash",
+    "gemini-3.6-flash",
 ]
 
 # Section headers we ask the model to use, so we can split the report
@@ -697,7 +697,7 @@ def main():
     st.markdown(
         """
         <section class="pcb-board">
-            <div class="eyebrow">PCB / SCHEMATIC REVIEWER</div>
+            <div class="eyebrow">CircuitMind AI</div>
             <h1>Review your design.<br><span>Catch risks earlier.</span></h1>
             <div class="hero-copy">
                 AI-assisted engineering analysis for signal integrity, power & ground,
