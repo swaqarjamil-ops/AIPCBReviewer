@@ -253,17 +253,46 @@ def configure_page():
             --surface-2: #111f18;
             --surface-3: #16271e;
             --primary: #65d46e;
-            --primary-soft: #9be6a0;
+            --primary-soft: #b8f5bd;
             --accent: #2fbf71;
-            --text: #eef7f0;
-            --muted: #9eaea3;
-            --border: rgba(101, 212, 110, .20);
-            --border-soft: rgba(255,255,255,.08);
+            --text: #ffffff;
+            --text-heading: #ffffff;
+            --text-body: #f1f7f2;
+            --text-secondary: #d5e2d8;
+            --text-muted: #b8c8bc;
+            --muted: #b8c8bc;
+            --border: rgba(101, 212, 110, .30);
+            --border-soft: rgba(255,255,255,.14);
         }
 
         html, body, [class*="css"] {
             font-family: Inter, sans-serif;
-            color: var(--text);
+            color: var(--text-body);
+        }
+
+        .stApp,
+        .stApp p,
+        .stApp span,
+        .stApp label,
+        .stApp div {
+            color: var(--text-body);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-heading) !important;
+        }
+
+        [data-testid="stMarkdownContainer"] p,
+        [data-testid="stMarkdownContainer"] li,
+        [data-testid="stMarkdownContainer"] strong,
+        [data-testid="stMarkdownContainer"] em {
+            color: var(--text-body) !important;
+        }
+
+        small,
+        .stCaption,
+        [data-testid="stCaptionContainer"] {
+            color: var(--text-secondary) !important;
         }
 
         .stApp {
@@ -388,8 +417,8 @@ def configure_page():
             font-weight: 800;
         }
 
-        .step b { color: #f0f6f1; font-size: .9rem; }
-        .step small { display: block; margin-top: .35rem; color: var(--muted); font-size: .75rem; line-height: 1.5; }
+        .step b { color: #ffffff !important; font-size: .9rem; }
+        .step small { display: block; margin-top: .35rem; color: #d0ddd3 !important; font-size: .75rem; line-height: 1.5; }
 
         /* Feature cards */
         .feature-row {
@@ -416,7 +445,7 @@ def configure_page():
             font-size: .88rem;
             font-weight: 700;
         }
-        .feature span { color: var(--muted); font-size: .75rem; line-height: 1.55; }
+        .feature span { color: #d0ddd3 !important; font-size: .75rem; line-height: 1.55; }
 
         .section-label {
             color: var(--primary);
@@ -468,8 +497,8 @@ def configure_page():
         }
 
         textarea, input {
-            background: #3d4741 !important;
-            color: #f4f8f5 !important;
+            background: #26352c !important;
+            color: #ffffff !important;
             border: 1px solid rgba(101,212,110,.28) !important;
             border-radius: 10px !important;
             font-size: .86rem !important;
@@ -526,8 +555,9 @@ def configure_page():
 
         .metric-label {
             margin-top: .28rem;
-            color: var(--muted);
+            color: #d0ddd3 !important;
             font-size: .72rem;
+            font-weight: 600;
         }
 
         /* Buttons */
@@ -566,7 +596,43 @@ def configure_page():
             color: var(--primary) !important;
         }
 
-        .report-shell { padding: 1.2rem; }
+        .report-shell {
+            padding: 1.2rem;
+            color: #f1f7f2 !important;
+        }
+
+        .report-shell p,
+        .report-shell li,
+        .report-shell ul,
+        .report-shell ol {
+            color: #f1f7f2 !important;
+            line-height: 1.75;
+        }
+
+        .report-shell strong,
+        .report-shell b {
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+        .report-shell h1,
+        .report-shell h2,
+        .report-shell h3,
+        .report-shell h4 {
+            color: #ffffff !important;
+            font-weight: 800;
+        }
+
+        .report-shell h2 {
+            border-bottom: 1px solid rgba(101,212,110,.25);
+            padding-bottom: .45rem;
+            margin-top: 1.2rem;
+        }
+
+        .report-shell code {
+            color: #d8f7dc !important;
+            background: #16271e !important;
+        }
 
         .report-title {
             font-size: 1.45rem;
@@ -679,7 +745,7 @@ def render_empty_state():
         <div class="status-card" style="text-align:center; padding:2.4rem 1.5rem;">
             <div style="font-size:2.5rem;">🟩</div>
             <h3 style="margin:.5rem 0; color:#fff;">Your engineering review starts here</h3>
-            <div style="color:#8b978d; max-width:650px; margin:auto;">
+            <div style="color:#d5e2d8; max-width:650px; margin:auto;">
                 Add a schematic PDF, optionally tell us about the design, and let the reviewer
                 surface the highest-value engineering risks.
             </div>
